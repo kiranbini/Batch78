@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Confirm Delete Student</title>
+</head>
+<body>
+	<h2>Are you sure do you want to delete {{ student.name }}?</h2>
+	<form method="post">
+		{% csrf_token %}
+		<button type="submit">Yes, delete</button>
+		<a href="{% url 'studlist' %}">cancel</a>
+
+	</form>
+
+</body>
+</html>
